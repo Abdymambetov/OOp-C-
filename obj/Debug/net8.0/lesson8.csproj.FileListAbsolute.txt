@@ -1,0 +1,14 @@
+/Users/mederabdymambetov/Desktop/Новая папка 2/lesson8/bin/Debug/net8.0/lesson8
+/Users/mederabdymambetov/Desktop/Новая папка 2/lesson8/bin/Debug/net8.0/lesson8.deps.json
+/Users/mederabdymambetov/Desktop/Новая папка 2/lesson8/bin/Debug/net8.0/lesson8.runtimeconfig.json
+/Users/mederabdymambetov/Desktop/Новая папка 2/lesson8/bin/Debug/net8.0/lesson8.dll
+/Users/mederabdymambetov/Desktop/Новая папка 2/lesson8/bin/Debug/net8.0/lesson8.pdb
+/Users/mederabdymambetov/Desktop/Новая папка 2/lesson8/obj/Debug/net8.0/lesson8.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mederabdymambetov/Desktop/Новая папка 2/lesson8/obj/Debug/net8.0/lesson8.AssemblyInfoInputs.cache
+/Users/mederabdymambetov/Desktop/Новая папка 2/lesson8/obj/Debug/net8.0/lesson8.AssemblyInfo.cs
+/Users/mederabdymambetov/Desktop/Новая папка 2/lesson8/obj/Debug/net8.0/lesson8.csproj.CoreCompileInputs.cache
+/Users/mederabdymambetov/Desktop/Новая папка 2/lesson8/obj/Debug/net8.0/lesson8.dll
+/Users/mederabdymambetov/Desktop/Новая папка 2/lesson8/obj/Debug/net8.0/refint/lesson8.dll
+/Users/mederabdymambetov/Desktop/Новая папка 2/lesson8/obj/Debug/net8.0/lesson8.pdb
+/Users/mederabdymambetov/Desktop/Новая папка 2/lesson8/obj/Debug/net8.0/lesson8.genruntimeconfig.cache
+/Users/mederabdymambetov/Desktop/Новая папка 2/lesson8/obj/Debug/net8.0/ref/lesson8.dll
