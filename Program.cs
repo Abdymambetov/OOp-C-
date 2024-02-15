@@ -7,6 +7,11 @@ namespace project{
             //Испоьзую модификатор private:
             // bot.setValues("Bot", 800, new byte[] {0,0,0});
             bot.printValues();
+            bot.Weight = -100;
+            bot.Width = -100;
+            System.Console.WriteLine(bot.Width);
+            System.Console.WriteLine(bot.Weight);
+
 
             Robot killer = new Robot();
             bot.setValues("Killer", 1000, new byte[] {0,0,10});

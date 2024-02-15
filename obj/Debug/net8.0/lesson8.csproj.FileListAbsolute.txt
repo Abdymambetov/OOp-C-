@@ -12,3 +12,4 @@
 /Users/mederabdymambetov/Desktop/Новая папка 2/lesson8/obj/Debug/net8.0/lesson8.pdb
 /Users/mederabdymambetov/Desktop/Новая папка 2/lesson8/obj/Debug/net8.0/lesson8.genruntimeconfig.cache
 /Users/mederabdymambetov/Desktop/Новая папка 2/lesson8/obj/Debug/net8.0/ref/lesson8.dll
+/Users/mederabdymambetov/Desktop/Новая папка 2/lesson8/obj/Debug/net8.0/lesson8.sourcelink.json

@@ -13,8 +13,26 @@ namespace project{
         private byte[] coordinates;
 
 
-        
+        // аксессоры:
+        public int Weight{
+            //get - Метод для получения значения свойства
+            get{
+                System.Console.WriteLine("Result: ");
+                return this.weight;
+            }
+            //set - Метод для установки значения свойства
+            set{
+                if(value < 1) this.weight = 1;
+                else if(value > 5000) this.weight = 5000;
+                else this.weight = value;
+            }
+        }
 
+
+        //отдельный аксессор:
+        public int Width{private get; set;}
+
+        
         // public Robot(){} // конструктор по умолчанию, все классы имеют такой конструктор
         public Robot(string name, int weight, byte[] coordinates){
             System.Console.WriteLine("Object creat");
