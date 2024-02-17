@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.Collections.Generic;
 namespace project{
     class Program{
         static void Main(){
@@ -20,6 +20,26 @@ namespace project{
             killer.Lazer();
             // Robot.count = 0;
             Robot.Print();
+
+
+            // массив указателей - каждый элемент это опеределенный объект на основе какого-то класса
+            List<Killer> robots = new List<Killer>();
+            robots.Add(new Killer("Alex", 400, new byte[] {0, 0, 10}, 100));
+            robots.Add(new Killer("Bob", 600, new byte[] {0, 10, 10}, 100));
+            robots.Add(new Killer("John", 800, new byte[] {10, 0, 10}, 100));
+            robots.Add(new Killer("Josh", 400, new byte[] {0, 50, 10}, 100));
+
+
+            Robot newRobot = null;
+
+            foreach(Killer obj in robots){
+                //оператор as позволыет преоброзовать один определенный объект с одним оперделенным типом данных (классом) к объекту другого типа данных (объекту у которого будет другой класс)
+                //оператор is позволяет проверить принадлежит ли объект к определенному типу данных
+                if(obj.Name == "Alex") newRobot = obj as Robot;
+                System.Console.WriteLine(obj.Name);
+                System.Console.WriteLine(obj is Robot);
+            }
+            
 
 
 

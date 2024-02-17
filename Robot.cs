@@ -14,6 +14,11 @@ namespace project{
         protected string surname;
 
         // аксессоры:
+        public string Name{
+            get{
+                return name;
+            } private set{}
+        }
         public int Weight{
             //get - Метод для получения значения свойства
             get{

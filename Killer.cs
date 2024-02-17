@@ -1,5 +1,6 @@
 using System;
 
+
 namespace project{
     // наследование Killer наследуется с помощью знака : от Robot,  в с# нет множественного наследования 
     class Killer : Robot{
