@@ -25,7 +25,12 @@ namespace project{
         // в данном случае устанавливается значение Health и вызывается метод printValues() базового класса.
         public Killer(string name, int weight, byte[] coordinates, int health) : base(name, weight, coordinates){
             this.Health = health;
+        }
+        //через base обращаемся к родительскому классу и вызываем от туда метод
+        public override void printValues()
+        {
             base.printValues();
+            System.Console.WriteLine($"Health: {this.Health}");
         }
     }
 }

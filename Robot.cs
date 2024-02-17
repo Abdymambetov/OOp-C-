@@ -55,7 +55,11 @@ namespace project{
             this.weight = weight;
             this.coordinates = coordinates;
         }
-        public void printValues(){
+
+        //virtual - виртуальный метоl это метод, который может быть переопределен в производных классах. 
+        // Виртуальные методы позволяют создавать иерархии классов, где производные классы могут изменять поведение методов базового класса по своему усмотрению.
+        // Чтобы объявить метод как виртуальный, используется ключевое слово virtual. Производные классы могут затем переопределить этот метод с помощью ключевого слова override.
+        public virtual void printValues(){
             System.Console.WriteLine(this.name + " weight: " + this.weight + ". Coordinates: ");
             foreach(byte el in coordinates){
                 System.Console.WriteLine(el);

@@ -15,7 +15,7 @@ namespace project{
 
             Killer killer = new Killer("Killer", 1000, new byte[] {0,0,10}, 100);
             // killer.setValues("Killer", 1000, new byte[] {0,0,10});
-            // killer.printValues();
+            killer.printValues();
             // killer.Health = 100;
             killer.Lazer();
             // Robot.count = 0;
