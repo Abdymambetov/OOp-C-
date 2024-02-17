@@ -11,7 +11,7 @@ namespace project{
         private string name;
         private int weight;
         private byte[] coordinates;
-
+        protected string surname;
 
         // аксессоры:
         public int Weight{
