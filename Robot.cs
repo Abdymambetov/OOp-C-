@@ -3,7 +3,7 @@ using System;
 namespace project{
 
     // данный класс является абстрактным, это означает что оно лишь описывает общие характеристики, также здесь могут быть некоторые методы которые должны реализовать в классах наследниках и плюс на основе этого класса нельзя создать объекта
-    abstract class Robot{
+    abstract class Robot : IRun, IJump{
         // private // доступен исключительно внутри этого класса 
         // protected //будет доступен только внутри класса где он создан и в классах наследниках 
         // public // доступен везде 
@@ -45,8 +45,10 @@ namespace project{
 
         //отдельный аксессор:
         public int Width{private get; set;}
+        public float speed { get; set; }
+        public float y { get; set; }
 
-        
+
         // public Robot(){} // конструктор по умолчанию, все классы имеют такой конструктор
         public Robot(string name, int weight, byte[] coordinates){
             System.Console.WriteLine("Object creat");
@@ -84,6 +86,16 @@ namespace project{
 
         public static void Print(){
             System.Console.WriteLine("Count: " + count);
+        }
+
+        public void RobotRun()
+        {
+            System.Console.WriteLine("Robot is now running");
+        }
+
+        public void Jump()
+        {
+            System.Console.WriteLine("Robot is jumping");
         }
 
         //ключевое слово this нельзя применять с статическим модификатором
