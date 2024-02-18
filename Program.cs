@@ -3,23 +3,25 @@ using System.Collections.Generic;
 namespace project{
     class Program{
         static void Main(){
-            // Bot bot = new Bot("Bot", 800, new byte[] {0,0,0});
-            // //Испоьзую модификатор private:
-            // // bot.setValues("Bot", 800, new byte[] {0,0,0});
-            // bot.printValues();
-            // bot.Weight = -100;
-            // bot.Width = -100;
-            // // System.Console.WriteLine(bot.Width);
-            // System.Console.WriteLine(bot.Weight);
+            Bot bot = new Bot("Bot", 800, new byte[] {0,0,0});
+            //Испоьзую модификатор private:
+            // bot.setValues("Bot", 800, new byte[] {0,0,0});
+            bot.printValues();
+            bot.Weight = -100;
+            bot.Width = -100;
+            // System.Console.WriteLine(bot.Width);
+            System.Console.WriteLine(bot.Weight);
 
 
-            // Killer killer = new Killer("Killer", 1000, new byte[] {0,0,10}, 100);
-            // // killer.setValues("Killer", 1000, new byte[] {0,0,10});
-            // killer.printValues();
-            // // killer.Health = 100;
-            // killer.Lazer();
-            // // Robot.count = 0;
-            // Robot.Print();
+            Killer killer = new Killer("Killer", 1000, new byte[] {0,0,10}, 100, Type.Enemy);
+            // killer.setValues("Killer", 1000, new byte[] {0,0,10});
+            killer.printValues();
+            // killer.Health = 100;
+            killer.Lazer();
+            // Robot.count = 0;
+            Robot.Print();
+
+
 
 
             // проверка перегрузки методов:
@@ -143,8 +145,10 @@ namespace project{
             // byte[] nums = {5,7,8,4,5};
             // byte res = Sum(nums);
             // System.Console.WriteLine(res);
-            Multiply(1.5f, 3.6f);
-            Multiply(1.2f);
+
+            // проверям перегрузку
+            // Multiply(1.5f, 3.6f);
+            // Multiply(1.2f);
         }
 
         // public static byte Sum(byte[] digits){
@@ -169,17 +173,17 @@ namespace project{
         // Перегрузка методов в C# позволяет определять несколько методов с одинаковым именем, но с различными параметрами в теле класса или структуры. 
         // Это позволяет иметь одно имя для метода, но разные способы его вызова в зависимости от переданных аргументов. 
         // При компиляции компилятор C# различает эти методы по их сигнатурам (количество параметров и их типы).
-        public static void Multiply(int a, int b){
-            int rest = a * b;
-            System.Console.WriteLine(rest);
-        } 
-        public static void Multiply(float a, float b){
-            float rest = a * b;
-            System.Console.WriteLine(rest);
-        }
-        public static void Multiply(float a){
-            float rest = a * 3;
-            System.Console.WriteLine(rest);
-        }
+        // public static void Multiply(int a, int b){
+        //     int rest = a * b;
+        //     System.Console.WriteLine(rest);
+        // } 
+        // public static void Multiply(float a, float b){
+        //     float rest = a * b;
+        //     System.Console.WriteLine(rest);
+        // }
+        // public static void Multiply(float a){
+        //     float rest = a * 3;
+        //     System.Console.WriteLine(rest);
+        // }
     }
 }
