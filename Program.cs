@@ -3,23 +3,28 @@ using System.Collections.Generic;
 namespace project{
     class Program{
         static void Main(){
-            Bot bot = new Bot("Bot", 800, new byte[] {0,0,0});
-            //Испоьзую модификатор private:
-            // bot.setValues("Bot", 800, new byte[] {0,0,0});
-            bot.printValues();
-            bot.Weight = -100;
-            bot.Width = -100;
-            // System.Console.WriteLine(bot.Width);
-            System.Console.WriteLine(bot.Weight);
+            // Bot bot = new Bot("Bot", 800, new byte[] {0,0,0});
+            // //Испоьзую модификатор private:
+            // // bot.setValues("Bot", 800, new byte[] {0,0,0});
+            // bot.printValues();
+            // bot.Weight = -100;
+            // bot.Width = -100;
+            // // System.Console.WriteLine(bot.Width);
+            // System.Console.WriteLine(bot.Weight);
 
 
-            Killer killer = new Killer("Killer", 1000, new byte[] {0,0,10}, 100);
-            // killer.setValues("Killer", 1000, new byte[] {0,0,10});
-            killer.printValues();
-            // killer.Health = 100;
-            killer.Lazer();
-            // Robot.count = 0;
-            Robot.Print();
+            // Killer killer = new Killer("Killer", 1000, new byte[] {0,0,10}, 100);
+            // // killer.setValues("Killer", 1000, new byte[] {0,0,10});
+            // killer.printValues();
+            // // killer.Health = 100;
+            // killer.Lazer();
+            // // Robot.count = 0;
+            // Robot.Print();
+
+
+            // проверка перегрузки методов:
+            // Bot bot = new Bot();
+            // bot.setValues();
 
 
 
@@ -30,22 +35,22 @@ namespace project{
 
 
             // массив указателей - каждый элемент это опеределенный объект на основе какого-то класса
-            List<Killer> robots = new List<Killer>();
-            robots.Add(new Killer("Alex", 400, new byte[] {0, 0, 10}, 100));
-            robots.Add(new Killer("Bob", 600, new byte[] {0, 10, 10}, 100));
-            robots.Add(new Killer("John", 800, new byte[] {10, 0, 10}, 100));
-            robots.Add(new Killer("Josh", 400, new byte[] {0, 50, 10}, 100));
+            // List<Killer> robots = new List<Killer>();
+            // robots.Add(new Killer("Alex", 400, new byte[] {0, 0, 10}, 100));
+            // robots.Add(new Killer("Bob", 600, new byte[] {0, 10, 10}, 100));
+            // robots.Add(new Killer("John", 800, new byte[] {10, 0, 10}, 100));
+            // robots.Add(new Killer("Josh", 400, new byte[] {0, 50, 10}, 100));
 
 
-            Robot newRobot = null;
+            // Robot newRobot = null;
 
-            foreach(Killer obj in robots){
-                //оператор as позволыет преоброзовать один определенный объект с одним оперделенным типом данных (классом) к объекту другого типа данных (объекту у которого будет другой класс)
-                //оператор is позволяет проверить принадлежит ли объект к определенному типу данных
-                if(obj.Name == "Alex") newRobot = obj as Robot;
-                System.Console.WriteLine(obj.Name);
-                System.Console.WriteLine(obj is Robot);
-            }
+            // foreach(Killer obj in robots){
+            //     //оператор as позволыет преоброзовать один определенный объект с одним оперделенным типом данных (классом) к объекту другого типа данных (объекту у которого будет другой класс)
+            //     //оператор is позволяет проверить принадлежит ли объект к определенному типу данных
+            //     if(obj.Name == "Alex") newRobot = obj as Robot;
+            //     System.Console.WriteLine(obj.Name);
+            //     System.Console.WriteLine(obj is Robot);
+            // }
             
 
 
@@ -138,6 +143,8 @@ namespace project{
             // byte[] nums = {5,7,8,4,5};
             // byte res = Sum(nums);
             // System.Console.WriteLine(res);
+            Multiply(1.5f, 3.6f);
+            Multiply(1.2f);
         }
 
         // public static byte Sum(byte[] digits){
@@ -154,5 +161,25 @@ namespace project{
         //     int res = a + b;
         //     return res;
         // }
+
+
+
+
+
+        // Перегрузка методов в C# позволяет определять несколько методов с одинаковым именем, но с различными параметрами в теле класса или структуры. 
+        // Это позволяет иметь одно имя для метода, но разные способы его вызова в зависимости от переданных аргументов. 
+        // При компиляции компилятор C# различает эти методы по их сигнатурам (количество параметров и их типы).
+        public static void Multiply(int a, int b){
+            int rest = a * b;
+            System.Console.WriteLine(rest);
+        } 
+        public static void Multiply(float a, float b){
+            float rest = a * b;
+            System.Console.WriteLine(rest);
+        }
+        public static void Multiply(float a){
+            float rest = a * 3;
+            System.Console.WriteLine(rest);
+        }
     }
 }

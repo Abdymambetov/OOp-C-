@@ -66,6 +66,13 @@ namespace project{
             this.weight = weight;
             this.coordinates = coordinates;
         }
+        public void setValues(string name, int weight){
+            this.name = name;
+            this.weight = weight;
+        }
+        public void setValues(string name){
+            this.name = name;
+        }
 
         // Абстрактный метод - это метод, который объявлен в абстрактном классе, но не имеет конкретной реализации в этом классе.
         // Любой класс, который наследует абстрактный класс, обязан реализовать все его абстрактные методы.
