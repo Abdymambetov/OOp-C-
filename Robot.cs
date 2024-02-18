@@ -1,7 +1,9 @@
 using System;
 
 namespace project{
-    class Robot{
+
+    // данный класс является абстрактным, это означает что оно лишь описывает общие характеристики, также здесь могут быть некоторые методы которые должны реализовать в классах наследниках и плюс на основе этого класса нельзя создать объекта
+    abstract class Robot{
         // private // доступен исключительно внутри этого класса 
         // protected //будет доступен только внутри класса где он создан и в классах наследниках 
         // public // доступен везде 
@@ -22,7 +24,7 @@ namespace project{
         public int Weight{
             //get - Метод для получения значения свойства
             get{
-                System.Console.WriteLine("Result: ");
+                // System.Console.WriteLine("Result: ");
                 return this.weight;
             }
             //set - Метод для установки значения свойства
@@ -31,6 +33,13 @@ namespace project{
                 else if(value > 5000) this.weight = 5000;
                 else this.weight = value;
             }
+        }
+
+        public byte[] Coordinates{
+            get{
+                return this.coordinates;
+            }
+            private set{}
         }
 
 
@@ -56,15 +65,22 @@ namespace project{
             this.coordinates = coordinates;
         }
 
+        // Абстрактный метод - это метод, который объявлен в абстрактном классе, но не имеет конкретной реализации в этом классе.
+        // Любой класс, который наследует абстрактный класс, обязан реализовать все его абстрактные методы.
+        // В языках, поддерживающих абстрактные методы, ключевое слово abstract используется для их объявления.
+        public abstract void printValues();
+
+
+
         //virtual - виртуальный метоl это метод, который может быть переопределен в производных классах. 
         // Виртуальные методы позволяют создавать иерархии классов, где производные классы могут изменять поведение методов базового класса по своему усмотрению.
         // Чтобы объявить метод как виртуальный, используется ключевое слово virtual. Производные классы могут затем переопределить этот метод с помощью ключевого слова override.
-        public virtual void printValues(){
-            System.Console.WriteLine(this.name + " weight: " + this.weight + ". Coordinates: ");
-            foreach(byte el in coordinates){
-                System.Console.WriteLine(el);
-            }
-        }
+        // public virtual void printValues(){
+        //     System.Console.WriteLine(this.name + " weight: " + this.weight + ". Coordinates: ");
+        //     foreach(byte el in coordinates){
+        //         System.Console.WriteLine(el);
+        //     }
+        // }
 
         public static void Print(){
             System.Console.WriteLine("Count: " + count);

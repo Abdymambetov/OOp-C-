@@ -3,7 +3,7 @@ using System.Collections.Generic;
 namespace project{
     class Program{
         static void Main(){
-            Robot bot = new Robot("Bot", 800, new byte[] {0,0,0});
+            Bot bot = new Bot("Bot", 800, new byte[] {0,0,0});
             //Испоьзую модификатор private:
             // bot.setValues("Bot", 800, new byte[] {0,0,0});
             bot.printValues();
@@ -20,6 +20,13 @@ namespace project{
             killer.Lazer();
             // Robot.count = 0;
             Robot.Print();
+
+
+
+
+
+
+
 
 
             // массив указателей - каждый элемент это опеределенный объект на основе какого-то класса
